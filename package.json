@@ -15,10 +15,9 @@
     "infinite"
   ],
   "license": "MIT",
-  "dependencies": {
-    "lodash": "^3.10.1",
-    "react": "^0.14.2",
-    "react-dom": "^0.14.2"
+  "peerDependencies": {
+    "react": "0.14 || 15 || 16",
+    "lodash": "*"
   },
   "devDependencies": {
     "babel": "^6.1.18",

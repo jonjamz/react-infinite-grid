@@ -115,6 +115,8 @@ var InfiniteGrid = function (_React$Component) {
 	}, {
 		key: '_visibleIndexes',
 		value: function _visibleIndexes() {
+			var _this2 = this;
+
 			var itemsPerRow = this._itemsPerRow();
 
 			// The number of rows that the user has scrolled past
@@ -136,7 +138,7 @@ var InfiniteGrid = function (_React$Component) {
 				minItemIndex: min,
 				maxItemIndex: max
 			}, function () {
-				this._lazyCallback();
+				_this2._lazyCallback();
 			});
 		}
 	}, {
@@ -243,11 +245,11 @@ var InfiniteGrid = function (_React$Component) {
 	}, {
 		key: '_scrollListener',
 		value: function _scrollListener(event) {
-			var _this2 = this;
+			var _this3 = this;
 
 			clearTimeout(this.scrollOffset);
 			this.scrollOffset = setTimeout(function () {
-				_this2._visibleIndexes();
+				_this3._visibleIndexes();
 			}, 10);
 		}
 	}, {
@@ -267,7 +269,7 @@ var InfiniteGrid = function (_React$Component) {
 	}, {
 		key: 'render',
 		value: function render() {
-			var _this3 = this;
+			var _this4 = this;
 
 			var entries = [];
 
@@ -293,12 +295,12 @@ var InfiniteGrid = function (_React$Component) {
 			return _react2.default.createElement(
 				'div',
 				{ className: 'infinite-grid-wrapper', ref: function ref(wrapper) {
-						_this3.wrapper = wrapper;
+						_this4.wrapper = wrapper;
 					}, onScroll: this._scrollListener, style: this._wrapperStyle() },
 				_react2.default.createElement(
 					'div',
 					{ ref: function ref(grid) {
-							_this3.grid = grid;
+							_this4.grid = grid;
 						}, className: 'infinite-grid', style: this._gridStyle() },
 					entries
 				)

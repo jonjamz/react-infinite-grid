@@ -99,7 +99,7 @@ export default class InfiniteGrid extends React.Component {
 		this.setState({
 			minItemIndex: min,
 			maxItemIndex: max,
-		}, function() {
+		}, () => {
 			this._lazyCallback();
 		});
 	}

@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _lodash = require('lodash');
 
 var _item = require('./item');
@@ -41,21 +45,6 @@ var InfiniteGrid = function (_React$Component) {
 					gridWidth: 0,
 					itemsPerRow: 2
 				}
-			};
-		}
-	}], [{
-		key: 'propTypes',
-		get: function get() {
-			return {
-				itemClassName: _react2.default.PropTypes.string,
-				entries: _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.object).isRequired,
-				height: _react2.default.PropTypes.number,
-				width: _react2.default.PropTypes.number,
-				padding: _react2.default.PropTypes.number,
-				wrapperHeight: _react2.default.PropTypes.number,
-				lazyCallback: _react2.default.PropTypes.func,
-				renderRangeCallback: _react2.default.PropTypes.func,
-				buffer: _react2.default.PropTypes.number
 			};
 		}
 	}]);
@@ -313,6 +302,18 @@ var InfiniteGrid = function (_React$Component) {
 
 exports.default = InfiniteGrid;
 ;
+
+InfiniteGrid.propTypes = {
+	itemClassName: _propTypes2.default.string,
+	entries: _propTypes2.default.arrayOf(_propTypes2.default.object).isRequired,
+	height: _propTypes2.default.number,
+	width: _propTypes2.default.number,
+	padding: _propTypes2.default.number,
+	wrapperHeight: _propTypes2.default.number,
+	lazyCallback: _propTypes2.default.func,
+	renderRangeCallback: _propTypes2.default.func,
+	buffer: _propTypes2.default.number
+};
 
 InfiniteGrid.defaultProps = {
 	buffer: 10,

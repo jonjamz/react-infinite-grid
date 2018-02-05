@@ -1,22 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {isEqual} from 'lodash';
 import Item from './item';
 
 export default class InfiniteGrid extends React.Component {
-
-	static get propTypes() {
-		return {
-			itemClassName: React.PropTypes.string,
-			entries: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
-			height: React.PropTypes.number,
-			width: React.PropTypes.number,
-			padding: React.PropTypes.number,
-			wrapperHeight: React.PropTypes.number,
-			lazyCallback: React.PropTypes.func,
-			renderRangeCallback: React.PropTypes.func,
-			buffer: React.PropTypes.number
-		}
-	}
 
 	initialState() {
 		return {
@@ -241,6 +228,18 @@ export default class InfiniteGrid extends React.Component {
 	}
 
 };
+
+InfiniteGrid.propTypes = {
+  itemClassName: PropTypes.string,
+  entries: PropTypes.arrayOf(PropTypes.object).isRequired,
+  height: PropTypes.number,
+  width: PropTypes.number,
+  padding: PropTypes.number,
+  wrapperHeight: PropTypes.number,
+  lazyCallback: PropTypes.func,
+  renderRangeCallback: PropTypes.func,
+  buffer: PropTypes.number
+}
 
 InfiniteGrid.defaultProps = {
 	buffer: 10,

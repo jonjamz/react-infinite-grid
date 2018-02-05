@@ -100,7 +100,7 @@ var InfiniteGrid = function (_React$Component) {
 	}, {
 		key: '_getGridRect',
 		value: function _getGridRect() {
-			return grid.getBoundingClientRect();
+			return this.grid.getBoundingClientRect();
 		}
 	}, {
 		key: '_getGridHeight',
@@ -110,7 +110,7 @@ var InfiniteGrid = function (_React$Component) {
 	}, {
 		key: '_getWrapperRect',
 		value: function _getWrapperRect() {
-			return wrapper.getBoundingClientRect();
+			return this.wrapper.getBoundingClientRect();
 		}
 	}, {
 		key: '_visibleIndexes',

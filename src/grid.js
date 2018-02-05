@@ -65,7 +65,7 @@ export default class InfiniteGrid extends React.Component {
 	}
 
 	_getGridRect() {
-		return grid.getBoundingClientRect();
+		return this.grid.getBoundingClientRect();
 	}
 
 	_getGridHeight() {
@@ -75,7 +75,7 @@ export default class InfiniteGrid extends React.Component {
 	}
 
 	_getWrapperRect() {
-		return wrapper.getBoundingClientRect();
+		return this.wrapper.getBoundingClientRect();
 	}
 
 	_visibleIndexes() {

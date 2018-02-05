@@ -65,7 +65,7 @@ export default class InfiniteGrid extends React.Component {
 	}
 
 	_getGridRect() {
-		return this.refs.grid.getBoundingClientRect();
+		return grid.getBoundingClientRect();
 	}
 
 	_getGridHeight() {
@@ -75,7 +75,7 @@ export default class InfiniteGrid extends React.Component {
 	}
 
 	_getWrapperRect() {
-		return this.refs.wrapper.getBoundingClientRect();
+		return wrapper.getBoundingClientRect();
 	}
 
 	_visibleIndexes() {
@@ -231,8 +231,8 @@ export default class InfiniteGrid extends React.Component {
 			entries.push(<Item {...itemProps} />);
 		}
 		return (
-			<div className='infinite-grid-wrapper' ref='wrapper' onScroll={this._scrollListener} style={this._wrapperStyle()}>
-				<div ref='grid' className='infinite-grid' style={this._gridStyle()}>
+			<div className='infinite-grid-wrapper' ref={(wrapper) => { this.wrapper = wrapper; }} onScroll={this._scrollListener} style={this._wrapperStyle()}>
+				<div ref={(grid) => { this.grid = grid; }} className='infinite-grid' style={this._gridStyle()}>
 					{entries}
 				</div>
 			</div>

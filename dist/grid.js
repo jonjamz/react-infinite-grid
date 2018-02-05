@@ -309,7 +309,7 @@ InfiniteGrid.propTypes = {
 	height: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
 	width: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
 	padding: _propTypes2.default.number,
-	wrapperHeight: _propTypes2.default.number,
+	wrapperHeight: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
 	lazyCallback: _propTypes2.default.func,
 	renderRangeCallback: _propTypes2.default.func,
 	buffer: _propTypes2.default.number

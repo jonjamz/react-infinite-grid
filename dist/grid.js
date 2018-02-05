@@ -306,8 +306,8 @@ exports.default = InfiniteGrid;
 InfiniteGrid.propTypes = {
 	itemClassName: _propTypes2.default.string,
 	entries: _propTypes2.default.arrayOf(_propTypes2.default.object).isRequired,
-	height: _propTypes2.default.number,
-	width: _propTypes2.default.number,
+	height: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
+	width: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
 	padding: _propTypes2.default.number,
 	wrapperHeight: _propTypes2.default.number,
 	lazyCallback: _propTypes2.default.func,

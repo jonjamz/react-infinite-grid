@@ -232,8 +232,14 @@ export default class InfiniteGrid extends React.Component {
 InfiniteGrid.propTypes = {
   itemClassName: PropTypes.string,
   entries: PropTypes.arrayOf(PropTypes.object).isRequired,
-  height: PropTypes.number,
-  width: PropTypes.number,
+  height: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]),
+  width: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]),
   padding: PropTypes.number,
   wrapperHeight: PropTypes.number,
   lazyCallback: PropTypes.func,
